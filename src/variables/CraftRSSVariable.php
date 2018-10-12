@@ -5,7 +5,7 @@ namespace Guilty\CraftRSS\variables;
 
 /**
  * @author    Guilty AS
- * @package   HubspotConnector
+ * @package   CraftRSS
  * @since     1.0.0
  */
 class CraftRSSVariable
