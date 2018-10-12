@@ -13,7 +13,6 @@ class CraftRSSVariable
 
     public function loadRss($url)
     {
-        // TODO(11 okt 2018) ~ Helge: Wrap in array
         try {
             return \Feed::loadRss($url)->toArray();
         } catch (\FeedException $e) {

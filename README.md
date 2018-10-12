@@ -22,19 +22,31 @@ To install the plugin, follow these instructions.
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Craft RSS.
 
 
-## Configuring HubSpot Connector
-
-1. Go the the admin panel
-2. Go to the settings page
-3. Click on "HubSpot Connector" under the "Plugins" section
-4. Enter your [Hubspot API key](https://knowledge.hubspot.com/articles/kcs_article/integrations/how-do-i-get-my-hubspot-api-key) and click Save.
-5. Done 
+## Configuring Craft RSS
+ 
+No configuration needed.
 
 ## Using Craft RSS
 
 ```twig
 
-TODO
+{% set blogFeed = craft.rss.loadRss("https://helgesverre.com/blog/feed/") %}
+
+{% if blogFeed %}
+
+    <h1>{{ blogFeed.title }}</h1>
+    <a href="{{ blogFeed.link }}">{{ blogFeed.link }}</a>
+
+    <ul>
+        {% for post in blogFeed.item %}
+            <li>
+                <a href="{{ post.link }}">
+                    {{ post.title }} - {{ post.pubDate }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
 ```
 
