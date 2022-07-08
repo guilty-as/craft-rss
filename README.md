@@ -1,11 +1,11 @@
-Craft RSS for Craft 3.x
+Craft RSS for Craft CMS
 =====
  
 Craft RSS is a simple helper plugin that lets you pull down an RSS feed and use it in your Twig templates.
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires Craft CMS 3.0.0-beta.23 or 4.0.0 later.
 
 ## Installation
 
